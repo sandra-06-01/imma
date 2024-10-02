@@ -1,0 +1,511 @@
+/* Structure générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px; /* Ajuste l'espacement par rapport aux liens de la navigation */
+}
+
+
+/* Assurez-vous que la barre de navigation utilise Flexbox */
+nav {
+    display: flex;
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Aligner verticalement */
+}
+
+/* Style de la liste dans la navbar */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utiliser flex pour aligner les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+/* Style des éléments individuels */
+.navbar li {
+    display: flex; /* Aligner les éléments en ligne */
+}
+
+.navbar li a {
+    text-decoration: none; /* Retirer le soulignement */
+    color: black;
+    padding: 10px 15px; /* Ajuster l'espacement interne */
+}
+
+.navbar li a:hover {
+    color: #ff027c; /* Couleur au survol */
+}
+
+.navbar li a.active {
+    color: #b74b4b; /* Couleur de l'élément actif */
+}
+
+
+.navbar li a:hover, .active {
+    color: #ff027c;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.login button {
+    background: #ff027c;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login button:hover {
+    background-color: #213547;
+}
+
+/* Panier */
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    width: 50px;
+    height: auto;
+}
+
+.count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #ff027c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.875rem;
+    z-index: 10;
+}
+
+/* Section principale */
+.text {
+    display: flex;
+    padding: 80px;
+    background: linear-gradient(100deg, #ea91bc, #e1ffea22 100%);
+    height: 52vh;
+}
+
+.left {
+    flex: 1;
+}
+
+.left h1 {
+    color: #213547;
+    font-size: 3rem;
+}
+
+.left p {
+    max-width: 50%;
+}
+
+.left span {
+    color: #ff027c;
+}
+
+.left button {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 40px;
+    background: #ff027c;
+    border: none;
+    font-size: 1.125rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.left button:hover {
+    background-color: #213547;
+}
+
+#boutique{
+    margin-top: 70px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex-basis: 30%;
+    min-width: 250px;
+}
+.col-1 img{
+    width: 100%;
+    box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.col-1 img:hover{
+    transform: translateY(-5px);
+}
+
+h3, h5 {
+    font-size: 1.5rem; /* Réduction de la taille des titres */
+    margin-bottom: 1rem; /* Ajustement des marges */
+}
+
+.small-container{
+    margin: 30px;
+    max-width: 1280px; 
+}
+/* Section de la boutique */
+#Boutique {
+    padding: 3rem 0;
+    background-color: #f9fafb;
+}
+
+#Boutique h3 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+#Boutique h5 {
+    font-size: 1.75rem;
+    color: #4b5563;
+    margin-bottom: 1.25rem;
+}
+
+.small-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.col-1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.col-1 img:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Section des articles pour bébé */
+#articles-bebe {
+    padding: 3rem 0;
+    background-color: #ffffff;
+}
+
+#articles-bebe h3 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+#articles-bebe h5 {
+    font-size: 1.75rem;
+    color: #4b5563;
+    margin-bottom: 1.25rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.article-card {
+    transition: box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h4 {
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.article-card p {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.article-card p.text-pink-600 {
+    color: #e11d48;
+}
+
+.article-card button {
+    background-color: #e11d48;
+    color: white;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.article-card button:hover {
+    background-color: #be185d;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte en blanc */
+    padding: 20px 0;
+    text-align: center; /* Centrage du texte */
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 14px; /* Taille de texte ajustée */
+}
+
+.footer-social {
+    margin: 10px 0;
+}
+
+.footer-social .social-link {
+    color: green; /* Couleur rose pour les liens */
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-link:hover {
+    color: green; /* Change la couleur au survol */
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.8; /* Légère transparence pour le copyright */
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer-info, .footer-social {
+        text-align: center;
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h3, h5 {
+    color: #b74b4b; /* Couleur de vos titres */
+}
+
+section {
+    padding: 2rem 0;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+h5 {
+    margin-bottom: 1.5rem;
+}
+
+.small-container {
+    max-width: 1200px; /* Ajustez la largeur du conteneur */
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adaptable aux tailles d'écran */
+    gap: 1.5rem;
+}
+
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre au survol */
+}
+
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+.bg-gray-100 {
+    background-color: #f3f4f6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-4xl {
+    font-size: 2.25rem; /* Taille de police pour les titres */
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Coins arrondis pour les images */
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.transition-shadow {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Ajoutez une bordure à la section À propos pour le faire ressortir */
+#about {
+    border: 1px solid #b74b4b; /* Couleur de la bordure */
+    border-radius: 0.5rem;
+    background-color: #ffffff; /* Couleur de fond blanche pour contraster */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cache la modale par défaut */
+.modal.hidden {
+    display: none;
+}
+
+/* Style de la modale */
+.modal {
+    display: block; /* Affiché par défaut, mais caché via JavaScript */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 8px;
+}
+
+/* Bouton de fermeture */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+}
